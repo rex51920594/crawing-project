@@ -1,0 +1,352 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe6e6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    border-bottom: 2px solid #007bff;
+    margin-bottom: 20px;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 0;
+    display: inline-block;
+}
+
+nav a.active {
+    border-bottom: 2px solid #007bff;
+    color: #007bff;
+}
+
+.content-wrapper {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#task-table th,
+#task-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#task-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+#task-table td:first-child {
+    color: #007bff;
+}
+
+.status-completed {
+    background-color: #00ffff;
+    color: #333;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.action-delete,
+.action-edit {
+    cursor: pointer;
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #007bff;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#current-page {
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    #task-table {
+        font-size: 14px;
+    }
+
+    #task-table th,
+    #task-table td {
+        padding: 8px;
+    }
+}
+
+/* Add these new styles for the input page */
+.scraper-buttons button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e6f3ff;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.scraper-buttons button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#search-query {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+#clear-search {
+    background: none;
+    border: 1px solid #ccc;
+    border-left: none;
+    color: #999;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 10px;
+    border-radius: 0 4px 4px 0;
+}
+
+.action-buttons button {
+    background-color: #e6f3ff;
+    border: none;
+    padding: 5px 10px;
+    color: #007bff;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.options details {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.options summary {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#run {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#reset {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* Add these new styles for the task details page */
+.task-details .view-all-tasks {
+    display: block;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.task-details #show-filters {
+    background-color: #e6f3ff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.task-details .sort-container {
+    margin-bottom: 20px;
+}
+
+.task-details #sort-select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.task-details .view-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.task-details .tab-button {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.task-details .tab-button.active {
+    border-bottom: 2px solid #007bff;
+    color: #007bff;
+}
+
+.task-details #details-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.task-details #details-table th,
+.task-details #details-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.task-details #details-table th {
+    background-color: #f8f9fa;
+}
+
+.task-details #download-csv {
+    background-color: #e6f3ff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #007bff;
+}
+
+/* Update these styles for the task details page */
+.task-details .table-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.task-details .table-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.task-details #details-table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+.task-details #details-table th,
+.task-details #details-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.task-details #details-table th {
+    background-color: #f8f9fa;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Add styles for table icons */
+.table-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.table-icons span {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Add this to your CSS file */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin-top: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Add these styles at the end of your existing CSS file */
+
+.progress-page {
+    background-color: #ffe6e6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.view-all-tasks {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.progress-content {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.progress-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.progress-content p {
+    font-size: 16px;
+    margin-bottom: 0;
+}

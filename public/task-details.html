@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="task-details">
+    <div class="container">
+        <!-- <h1>Find thousands of new customers personal phone, email and grow your business exponentially.</h1> -->
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Input</a></li>
+                <li><a href="output.html" class="active">Output</a></li>
+            </ul>
+        </nav>
+
+        <div class="content-wrapper">
+            <a href="output.html" class="view-all-tasks">View All Tasks</a>
+            
+            <!-- <button id="show-filters">Show Filters</button> -->
+            
+            <div class="sort-container">
+                <!-- <label for="sort-select">Sort</label>
+                <select id="sort-select">
+                    <option value="best-potential">Best Potential Customers</option>
+                </select> -->
+            </div>
+            
+            <div class="view-tabs">
+                <!-- <button class="tab-button active">Overview</button>
+                <button class="tab-button">Featured Reviews</button>
+                <button class="tab-button">Detailed Reviews</button>
+                <button class="tab-button">All Fields</button> -->
+            </div>
+            
+            <div class="table-container">
+                <div class="table-scroll">
+                    <table id="details-table">
+                        <thead>
+                            <tr>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table data will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <button id="download-csv">Download CSV</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+    <script src="task-details.js"></script>
+</body>
+</html>

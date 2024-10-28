@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Extraction Tool - Output</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Input</a></li>
+                <li><a href="output.html" class="active">Output</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <div class="content-wrapper">
+                <table id="task-table">
+                    <thead>
+                        <tr>
+                            <th>View Task</th>
+                            <th>Task Name</th>
+                            <th>Result Count</th>
+                            <th>Status</th>
+                            <th>Duration</th>
+                            <th>Start Time</th>
+                            <th>Finish Time</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table rows will be dynamically added here by JavaScript -->
+                    </tbody>
+                </table>
+                
+                <div class="pagination">
+                    <button id="prev-page">&#8249;</button>
+                    <span id="current-page">1</span>
+                    <button id="next-page">&#8250;</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="output.js"></script>
+</body>
+</html>
